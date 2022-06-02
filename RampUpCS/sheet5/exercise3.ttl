@@ -1,0 +1,34 @@
+@prefix rel: <http://ifisexamples.com/relations/> .
+@prefix loc: <http://ifisexamples.com/locations/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://ifisexamples.com/> .
+
+<Alan_Turing> rel:birtPlace loc:Maida_Vale ;
+              rel:childOf <Julius_Turing> ;
+              rel:childOf <Ethel_Turing> ;
+              rel:birthDate "1912-06-23"^^xsd:date ;
+              rel:brotherOf <John_Turing>.
+
+<Julius_Turing> rel:birthYear 1873 ;
+                rel:deathYear 1947 ;
+                rel:worksFor <Indian_Civil_Service> ;
+                rel:childOf <John_Robert_Turing> ;
+                rel:marriedWith <Ethel_Turing> ;
+                rel:fatherOf <Alan_Turing>;
+                rel:fatherOf <John_Turing>.
+
+<Ethel_Turing> rel:birthYear 1881 ;
+               rel:deathYear 1976 ;
+               rel:maidenName "Stoney"^^xsd:string ;
+               rel:motherOf <Alan_Turing> ;
+               rel:motherOf <John_Turing> ;
+               rel:childOf <Edward_Stoney>.
+
+<John_Turing> rel:brotherOf <Alan_Turing> ;
+              rel:childOf <Julius_Turing> ;
+              rel:childOf <Ethel_Turing> ;
+              rel:fatherOf <John_Dermot_Turing>.
+
+<John_Dermot_Turing> rel:childOf <John_Turing>.
+
+loc:Maida_Vale rel:partOf loc:London .
